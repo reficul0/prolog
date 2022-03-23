@@ -16,4 +16,4 @@ merge([X|Lhs], [Y|Rhs], [X|Res]) :-
 merge([X|Lhs], [Y|Rhs], [Y|Res]) :-
     merge([X|Lhs], Rhs, Res).
 
-?- merge([1,3,5,7,8], [2,3,5,7], Z).
+?- trace, merge([1,3,5,7,8], [2,3,5,7], Z).

@@ -6,7 +6,7 @@ two_lists([A,A1|Lhs],[B|Rhs]):-
     B is (A+1), A1 is (2*B), !,
     two_lists([A1|Lhs],Rhs).
 
-two_lists([A],[B]):- 
+two_lists([A],[B]):-
     B is (A+1).
 
 two_lists([],[]).
