@@ -5,7 +5,7 @@
 :- dynamic sportsmen/2.
 
 modify(Surname,Place):-
-    trace, Balls1 is 21 - Place,
+    number(Place), Balls1 is 21 - Place,
     ignore(retract(sportsmen(Surname, Balls))),
     assert(sportsmen(Surname, Balls1)).
 
@@ -14,7 +14,9 @@ modify(Surname,Place):-
     write('Enter place: '), read(Place1),
     number_string(Place1, Place),
     modify(Surname, Place1),
+    telling(Old),
     tell('bd.pl'),
     nl,
     listing(sportsmen),
-    told.
+    told,
+    tell(Old).
